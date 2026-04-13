@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/data.ts","./src/main.tsx","./src/components/shell.tsx","./src/components/ui/button.tsx","./src/pages/adminpage.tsx","./src/pages/applypage.tsx","./src/pages/eventdetailpage.tsx","./src/pages/eventspage.tsx","./src/pages/homepage.tsx","./src/pages/mepage.tsx"],"version":"5.9.3"}

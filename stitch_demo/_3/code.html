@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#0058bb",
+                    "surface-container-low": "#f3f4ed",
+                    "on-background": "#191c18",
+                    "on-secondary-container": "#fefcff",
+                    "error": "#ba1a1a",
+                    "surface": "#f9faf2",
+                    "surface-bright": "#f9faf2",
+                    "primary-fixed-dim": "#a1d494",
+                    "inverse-primary": "#a1d494",
+                    "secondary-fixed-dim": "#adc7ff",
+                    "on-primary-fixed-variant": "#23501e",
+                    "outline-variant": "#c2c9bb",
+                    "secondary-fixed": "#d8e2ff",
+                    "surface-container-highest": "#e2e3dc",
+                    "background": "#f9faf2",
+                    "on-tertiary-container": "#ffb17d",
+                    "surface-dim": "#d9dbd3",
+                    "inverse-surface": "#2e312c",
+                    "on-surface-variant": "#42493e",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#311300",
+                    "tertiary-fixed-dim": "#ffb786",
+                    "surface-variant": "#e2e3dc",
+                    "primary": "#154212",
+                    "inverse-on-surface": "#f0f1ea",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#001a41",
+                    "tertiary-fixed": "#ffdcc6",
+                    "secondary-container": "#1471e6",
+                    "primary-fixed": "#bcf0ae",
+                    "on-primary-fixed": "#002201",
+                    "on-tertiary-fixed-variant": "#723600",
+                    "surface-tint": "#3b6934",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#9dd090",
+                    "outline": "#72796e",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#2d5a27",
+                    "on-secondary-fixed-variant": "#004493",
+                    "surface-container-high": "#e7e9e1",
+                    "on-error": "#ffffff",
+                    "tertiary": "#5e2b00",
+                    "tertiary-container": "#803e00",
+                    "on-surface": "#191c18",
+                    "surface-container": "#edefe7",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(24px);
+      }
+      .noise-bg {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.02;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#F9FAF2]/70 backdrop-blur-xl transition-all duration-300 font-['Plus_Jakarta_Sans'] antialiased">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-bold tracking-tighter text-[#154212]">创业森林</div>
+<div class="hidden md:flex items-center space-gap-8 gap-x-8">
+<a class="text-[#154212]/70 hover:text-[#154212] transition-colors duration-300" href="#">活动</a>
+<a class="text-[#154212]/70 hover:text-[#154212] transition-colors duration-300" href="#">关于</a>
+<a class="text-[#154212]/70 hover:text-[#154212] transition-colors duration-300" href="#">申请成为组织者</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-DEFAULT font-medium hover:opacity-90 transition-all scale-95 active:scale-90">登录</button>
+</div>
+</div>
+</nav>
+<main class="relative pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-surface px-8">
+<div class="noise-bg absolute inset-0 z-0"></div>
+<!-- Organic Blobs -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-fixed rounded-full blur-[120px] opacity-40"></div>
+<div class="absolute bottom-24 -left-24 w-80 h-80 bg-secondary-fixed rounded-full blur-[100px] opacity-30"></div>
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div>
+<span class="inline-block px-4 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold tracking-widest mb-6">ECOSYSTEM OF GROWTH</span>
+<h1 class="text-5xl md:text-7xl font-bold text-primary tracking-tighter leading-[1.1] mb-8">
+                        汇聚创业力量，<br/><span class="text-secondary italic font-medium">共建创新森林</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-lg mb-10 leading-relaxed">
+                        在数字时代的沃土中，我们为创业者提供扎根所需的资源与向上攀升的动力。加入我们的生态系统，让创新如森林般繁茂。
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-DEFAULT text-lg font-semibold flex items-center gap-2 group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            探索最新活动
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="px-8 py-4 bg-surface-container-highest text-primary rounded-DEFAULT text-lg font-semibold hover:bg-surface-container-high transition-colors">
+                            了解我们
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="relative aspect-square rounded-xl overflow-hidden shadow-2xl rotate-2">
+<img class="w-full h-full object-cover" data-alt="conceptual art of futuristic bioluminescent forest merging with crystalline circuit patterns in soft green and deep blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfuDxawpbjhGP5akIwZ6GaZovr-K1VFlBZdCjVBfhDtO2HZSx5DTvfFirAPtbJHBezORKQh8iHxQyfNhollA7vqq8Tf0OsBs07BxH-0FHpwJjWLociBgOnZF8Q1yznbe8PBvPxcxrbK6pzx7dgIdRPhanc1TQhBYR_qWxLrQI9PnSi9DuTP5J19ow_RczQ8Gj6gEVUh4DE8M-geO2Dpohp_3gqpxQpnIBWfA98fyzUfhj4svh4W4LNhQUalH3c3bDQBI_4dItEyjk"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-6 rounded-xl shadow-xl max-w-xs -rotate-3">
+<div class="flex items-center gap-4 mb-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">trending_up</span>
+</div>
+<span class="text-sm font-bold">加速成长率</span>
+</div>
+<p class="text-xs text-on-surface-variant">我们的项目参与者在入驻后的第一年内，资源获取效率平均提升了 120%。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-24 bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center p-8 bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="text-4xl font-black text-primary mb-2">500+</div>
+<div class="text-sm font-bold text-on-surface-variant tracking-widest">活动场次</div>
+</div>
+<div class="text-center p-8 bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="text-4xl font-black text-secondary mb-2">2000+</div>
+<div class="text-sm font-bold text-on-surface-variant tracking-widest">创业项目</div>
+</div>
+<div class="text-center p-8 bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="text-4xl font-black text-tertiary mb-2">150+</div>
+<div class="text-sm font-bold text-on-surface-variant tracking-widest">合作机构</div>
+</div>
+<div class="text-center p-8 bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="text-4xl font-black text-primary mb-2">10k+</div>
+<div class="text-sm font-bold text-on-surface-variant tracking-widest">社区成员</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Active Events Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div class="max-w-xl">
+<h2 class="text-4xl font-bold text-primary mb-4">进行中活动</h2>
+<p class="text-on-surface-variant">最前沿的创业视角，最具活力的社群联结，在此即刻开启。</p>
+</div>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 flex items-center gap-1 group" href="#">
+                        查看全部活动
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Event Card 1 -->
+<div class="group flex flex-col bg-surface-container-low rounded-xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="professional modern tech workshop with young diverse entrepreneurs sitting in a circular minimalist studio setting with plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDehYw6ALPfArQ0vDsinAD-3cqefmtWHoCtSP_87Vf2VCcGGa59f3pp28Nvw5sazyUfwzReA-qxM7o6IhoFXMt_zGxPfREu5LFUod1QVUNnIl2nzKdHFErBScvxxbUEojR9izRGWTfp0KIM3xdJQbWnjt38-F7_OpAeX2wYXDh4kWGNy1vc3RLjQ89J_RrLQ8VzYYfvOTBNQ4dqa9_Ms-UHg4-k4IVpzz9iEGZkTcMZza0EdFiRf8lsnWP99wk7xiFchat9AVwSk6Y"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-secondary text-on-secondary-container text-[10px] font-bold tracking-wider">报名中</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 text-primary font-bold text-xs mb-3">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                                2024.05.12
+                            </div>
+<h3 class="text-xl font-bold mb-4 group-hover:text-primary transition-colors">AI 时代的商业化路径探讨会</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">邀请顶尖人工智能专家与独角兽创始人，闭门交流最新落地实践。</p>
+<button class="w-full py-3 bg-surface-container-highest text-primary font-bold rounded-DEFAULT group-hover:bg-primary group-hover:text-on-primary transition-all">立即预约</button>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="group flex flex-col bg-surface-container-low rounded-xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="cinematic close up of a startup pitch competition with a bright screen and focused audience in a dark high-tech theater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoGr2nG6QL-eISNZTkWUyKK5DgDdaqdHGosQk7HSPH0oD5voQJCofqKjbpDHDPiTfA1dbWoPHShoy1zyc-mE83-ECuF_roBr3cfYBO0wUt7_rGCiNweGZo3bmTrPJ_D7BwCw3Wd9Rw15HNomM60JmHhX6glIs_tPRQG9OdOwyuOCEB8IOI-B-OS3Z4SKU1fG2pFcLh716ifyLjuiZILKVWu0VSGPu-Vop0RgkOuAC3tpRvw0xr9_qYvkQlb7no6mm_nHxSeN5b8Fg"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold tracking-wider">进行中</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 text-primary font-bold text-xs mb-3">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                                2024.04.28
+                            </div>
+<h3 class="text-xl font-bold mb-4 group-hover:text-primary transition-colors">森林杯·年度大学生创业路演</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">全国 20 所高校联动，角逐千万级天使轮融资意向。</p>
+<button class="w-full py-3 bg-surface-container-highest text-primary font-bold rounded-DEFAULT group-hover:bg-primary group-hover:text-on-primary transition-all">查看直播</button>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="group flex flex-col bg-surface-container-low rounded-xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="outdoors entrepreneurial campfire networking event at dusk with soft lighting and cozy forest atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcMsOAWXRhp655eDnSjS6WLC9UbHLKJMHPHcGILiwuBLDXb8o810FP3SLHQudEQZ4RyattbcFTwZCb5whVVEFjtJBJej8yaD5tqRCgvBMYXvLdWyiBWurMyB_N6B2iWOAnVeQSVxSyPmyxCVH6cSng5gJwsppkZ7u6bZBtgoIgUZ1e8Y2R15fcT74OUXOEBKGpoZYfPom4gyJnQKJuR2EX56hwhQO2hwBYrm-UBz7r0abn0tF4JwUnxo3v6IoqpCuU9oAFq7a6SyU"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold tracking-wider">入选公示</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 text-primary font-bold text-xs mb-3">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                                2024.06.01
+                            </div>
+<h3 class="text-xl font-bold mb-4 group-hover:text-primary transition-colors">创始人森林露营沙龙</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">回归自然，在篝火旁重塑你的创业愿景与核心领导力。</p>
+<button class="w-full py-3 bg-surface-container-highest text-primary font-bold rounded-DEFAULT group-hover:bg-primary group-hover:text-on-primary transition-all">名单查询</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Past Highlights (Horizontal Scroll Look) -->
+<section class="py-32 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 mb-16">
+<h2 class="text-4xl font-bold text-primary mb-2">历届回顾</h2>
+<p class="text-on-surface-variant">每一个精彩瞬间，都是森林茁壮成长的年轮。</p>
+</div>
+<div class="flex gap-8 px-8 md:px-[calc(50vw-640px+32px)] overflow-x-auto no-scrollbar">
+<div class="flex-shrink-0 w-80 md:w-[480px]">
+<div class="aspect-video rounded-xl overflow-hidden mb-4 shadow-lg">
+<img class="w-full h-full object-cover" data-alt="dynamic wide shot of a tech conference stage with neon lighting and energetic presenter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtvG4SGtVDHqmNx8ImSN-47uYWcHyiN1CqxN7SR9G1g1eYZqjqv8UEMkDmyDGBPxSTKPIUbDyEHc6Fy9MDatNjnd-rUISnlim0AkqNn3isXsDRsIBVLsw8HOEEVJHM7ttzxd8hH_htREavQzwolu8-DgUhAweC4N_jcPIvkeGlYE4C4Eb1-TzrSUhlAQ1ul7gOAJRAmwvWJP-AXMTxd3fP_zv5kTBf3nfasxJmG5uTMsxzJA90CVibs27E1M4fZxRNpJpbnzvCciw"/>
+</div>
+<p class="font-bold">2023 创新影响力峰会</p>
+</div>
+<div class="flex-shrink-0 w-80 md:w-[480px]">
+<div class="aspect-video rounded-xl overflow-hidden mb-4 shadow-lg">
+<img class="w-full h-full object-cover" data-alt="group of smiling young founders cheering with trophies in a modern glass building lobby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEX0oPA6OLDDXIc30JPGaXUqIHHVlXwhFbihy9KdmVjC34N3apUBIEe5WtAWau0R_cEVj4f6yceHEoQ-XrjXjBe-nBFGFeM5-qBskI8uOUZFBvRERo8aRgVIgAqHoyZPg5E21oHs__vTzjZvTFL2tmkiOtjo3epVaKk6Y85B1XjIIMHzVYUHIknQlqplBezTdxH_gpT5UrajQ_kOrhx1OyGJRjoWft6Z1h9np_NqQ3HKAte5afcOhOPHDIG8SsHZVM420sXMJ8Qc8"/>
+</div>
+<p class="font-bold">冬季孵化营结营仪式</p>
+</div>
+<div class="flex-shrink-0 w-80 md:w-[480px]">
+<div class="aspect-video rounded-xl overflow-hidden mb-4 shadow-lg">
+<img class="w-full h-full object-cover" data-alt="close up of hands working together on a collaborative whiteboard filled with sticky notes and diagrams" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvKSWqsSOTV-574KBPCoywY0-UUrpOtH_kRPhBPqTljKcTD2ZOqZxZ2vUakxvm6_sLRw_Oh8jxea4Irsf-Pey259JWUP-3UD25jznlDPreMgqxdBi5OsnqOyXDAu8iA6hbY-vXhBFIdZeF-9zYU-zeoob64ifW_35VuW-jsaNdj8wBGnVx8Y6BVDf2N_Cy8Fhdv_S8EehSARFHAU2nrpO6zghjQR942tGbxCUy44moOrFWIT_rMzY8cTQGusC2VUHd4PXfX3Pu6_Q"/>
+</div>
+<p class="font-bold">春季产品黑客马拉松</p>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="relative bg-primary rounded-2xl p-12 md:p-24 overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<svg class="w-full h-full fill-white" viewbox="0 0 100 100">
+<pattern height="10" id="grid" patternunits="userSpaceOnUse" width="10">
+<path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+<rect fill="url(#grid)" height="100" width="100"></rect>
+</svg>
+</div>
+<div class="relative z-10 text-center max-w-2xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-black text-on-primary mb-8 tracking-tighter">成为组织者，<br/>发起你的创业影响力</h2>
+<p class="text-on-primary/70 text-lg mb-12">无论你是行业老兵还是满腔热忱的志愿者，只要你有好的活动创意，我们为你提供平台、流量与资源支持。</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="px-10 py-5 bg-tertiary text-on-tertiary rounded-DEFAULT font-bold text-lg hover:shadow-2xl transition-all">
+                                提交组织申请
+                            </button>
+<button class="px-10 py-5 bg-white/10 text-on-primary rounded-DEFAULT font-bold text-lg hover:bg-white/20 backdrop-blur-sm transition-all">
+                                咨询合作意向
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#154212] dark:bg-stone-950 w-full py-16 text-[#F9FAF2] font-['Plus_Jakarta_Sans'] text-sm leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+<div class="flex flex-col gap-6">
+<div class="text-xl font-black text-[#F9FAF2]">创业森林</div>
+<p class="text-[#F9FAF2]/60 max-w-xs">
+                    让每一次创新都能扎根发芽，共建一个永续生长的创业者生态系统。
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#F9FAF2]">资源</h4>
+<a class="text-[#F9FAF2]/60 hover:text-white transition-opacity" href="#">关于我们</a>
+<a class="text-[#F9FAF2]/60 hover:text-white transition-opacity" href="#">品牌手册</a>
+<a class="text-[#F9FAF2]/60 hover:text-white transition-opacity" href="#">申请合作</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#F9FAF2]">社群</h4>
+<a class="text-[#F9FAF2]/60 hover:text-white transition-opacity" href="#">社交媒体</a>
+<a class="text-[#F9FAF2]/60 hover:text-white transition-opacity" href="#">加入我们</a>
+<a class="text-[#F9FAF2]/60 hover:text-white transition-opacity" href="#">组织者手册</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#F9FAF2]">联系</h4>
+<p class="text-[#F9FAF2]/60">北京市朝阳区科技园区 A 座 402</p>
+<p class="text-[#F9FAF2]/60">contact@growthforest.com</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4">
+<p class="text-[#F9FAF2]/40">© 创业森林. All rights reserved. 备案号：ICP备12345678号</p>
+<div class="flex gap-6 text-[#F9FAF2]/40">
+<a class="hover:text-white transition-colors" href="#">隐私条款</a>
+<a class="hover:text-white transition-colors" href="#">法律协议</a>
+</div>
+</div>
+</footer>
+</body></html>
